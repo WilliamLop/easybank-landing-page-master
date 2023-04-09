@@ -1,0 +1,638 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap');
+
+
+:root{
+    --DarkBlue: hsl(233, 26%, 24%);
+    --LimeGreen: hsl(136, 65%, 51%);
+    --BrightCyan: hsl(192, 70%, 51%);
+    --GrayishBlue: hsl(233, 8%, 62%);
+    --LightGrayishBlue: hsl(220, 16%, 96%);
+    --VeryLightGray: hsl(0, 0%, 98%);
+    --White: hsl(0, 0%, 100%);
+    --size-bg: 2.3em;
+    --size-md: 1em;
+    --size-sm: .8em;
+
+}
+
+/* Estilo el body para buenas prácticas */
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    line-height: 1.3;
+    min-height: 100vh;
+    font-family: 'Public Sans', sans-serif;
+    font-size: 1.05em;
+    width: 100%;
+}
+
+/* Estilo figure para quirarle el margin */
+
+figure{
+    margin: 0;
+}
+
+/* Estilo el header */
+
+.header{
+    background-color: var(--VeryLightGray);
+    width: 100%;
+    top: 0;
+    padding: 1.2em 0 .6rem 0;
+    z-index: 100;
+    position: fixed;
+    transition: .50s ease-in-out;
+
+}
+
+.section__header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    max-width: 1600px;
+
+}
+
+
+/* Estilo el logo */
+.header__logo{
+    animation: opacity 1.4s ease-in;
+}
+
+
+/* Estilo la lista ul */
+
+.nav__list{
+    list-style: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: var(--White);
+    clip-path: circle(0.0% at 100% 0);
+    transition: .5s ease-in-out;
+    animation: opacity 1.5s ease-in;
+    z-index: 10;
+    /* border-radius: 0rem 0rem 3rem 3rem; */
+    filter: drop-shadow(1px 1px 2px var(--GrayishBlue));
+}
+
+.nav__link{
+    color: var(--GrayishBlue);
+    transition: .50s ease-in;
+}
+
+.nav__link:hover{
+    color: var(--LimeGreen);
+    border-bottom: 1px solid var(--LimeGreen);
+}
+
+
+/* Estilo mi menu */
+.box-model{
+    z-index: 11;
+    color: var(--DarkBlue);
+    animation: opacity 1.7s ease-in;
+}
+
+/* Agrego capa para mostrar el menu  en mobile*/
+.capa__menu{
+    clip-path: circle(150% at 100% 0);
+}
+
+/* Agrego cerrar al menu */
+
+
+
+/* Estilo el boton request */
+
+.request{
+    display: none;
+    animation: opacity 1.8s ease-in;
+}
+
+/* Quito la decoracion de todos los links */
+
+.link{
+    text-decoration: none;
+    
+}
+/* Estilo el contenido main */
+
+
+
+/* Agrego una clase para las imagenes */
+
+.ajuste-img{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Estilo la primer seccion de bienvenida */
+.welcome__img{
+    position: relative;
+    width:  100%;
+}
+
+.welcome__fondo{
+    background-image: url(../images/bg-intro-mobile.svg);
+    height: 510px;
+    z-index: 2;
+    animation: opacity 1s ease-in;
+}
+
+.welcome__celulares{
+    background-image: url(../images/image-mockups.png);
+    width:  100%;
+    max-width: 550px;
+    height: 500px;
+    position: absolute;
+    left: 0;
+    top: -80px;
+    z-index: 3;
+    animation: escala 1.2s ease-in;
+} 
+
+
+.welcome__link{
+    display: block;
+    background: linear-gradient(45deg, var(--LimeGreen), var(--BrightCyan));
+    padding: .8rem 1rem;
+    border-radius: 2.4rem;
+    width: 120px;
+    color: var(--VeryLightGray);
+    margin: 2rem auto 1rem auto;
+    font-size: var(--size-md);
+    font-weight: 700;
+    animation: opacity 2s ease-in;   
+    transition: background 0.5s ease, transform 0.5s ease 0.2s;
+}
+
+
+.welcome__info{
+    text-align: center;
+    padding: 0 0 5rem 0;
+
+}
+
+.welcome__title{
+    font-size:var(--size-bg);
+    font-weight: 500;
+    margin: 0;
+    animation: opacity 2.4s ease-in;
+
+}
+
+.welcome__description{
+    color: var(--GrayishBlue);
+    font-size: var(--size-md);
+    padding: 0 1rem;
+    animation: opacity 2.2s ease-in;
+
+}
+
+/* Estilo la seccion de bank con grid */
+
+.bank{
+    text-align: center;
+    background-color: var(--LightGrayishBlue);
+    padding: 2rem 0;
+    width: 100%;
+}
+.bank__info{
+    width: 90%;
+    margin: auto;
+    padding: 1rem 0;
+    max-width: 1600px;
+
+
+}
+.bank__title{
+    font-size: var(--size-bg);
+    padding: 1rem 2rem;
+    font-weight: 500;
+    margin: 0;
+    color: var(--DarkBlue);
+    animation: opacity 2.1s ease-in;
+
+}
+.bank__icon{
+    animation: escala .6s ease-in;
+
+}
+
+.bank__description{
+    color: var(--GrayishBlue);
+    animation: opacity 2.3s ease-in;
+
+
+}
+
+.articles__bank{
+    display: grid;
+    gap: 1rem;
+    width: 90%;
+    margin: 0 auto;
+    color: var(--GrayishBlue);
+    max-width: 1600px;
+}
+
+.bank__heading{
+    color: var(--DarkBlue);
+    animation: opacity 2.1s ease-in;
+
+}
+
+.bank__text{
+    font-size: .9em;
+    padding: 0;
+    animation: opacity 2.1s ease-in;
+
+}
+
+/* Estilo la seccion de articulos  */
+
+
+.section__articles{
+    background-color: var(--VeryLightGray);
+    padding: 4rem 0;
+
+}
+
+.articles__grid{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    gap: 2rem;
+    max-width: 1600px;
+
+    
+}
+
+.articles__title{
+    text-align: center;
+    font-size: var(--size-bg);
+    font-weight: 500;
+    margin: 0;
+    padding: 1rem 0;
+    animation: opacity 1.6s ease-in;
+
+}
+
+.articles__img img{
+    inline-size: 100%;
+    aspect-ratio: 20 / 15;
+    object-fit: cover;
+    border-radius: .7rem .7rem 0 0;
+    animation: escala 1.5s ease-in-out;
+
+}
+.articles__description{
+    padding: 1rem 1.85rem;
+    animation: opacity 2.1s ease-in;
+
+}
+.article__text--sm{
+    font-size: var(--size-sm);
+    color: var(--GrayishBlue);
+    animation: opacity 2s ease-in;
+
+}
+
+.article__heading{
+    font-size: 1.2em;
+    font-weight: 700;
+    color: var(--DarkBlue);
+    margin: 0;
+    animation: opacity 2.1s ease-in;
+
+}
+
+.articles__description{
+    font-size: .8em;
+    color: var(--GrayishBlue);
+}
+
+.article__heading:hover{
+    color: var(--LimeGreen);
+    cursor: pointer;
+    transition: .50s ease-in;
+
+}
+
+
+.article__card{
+    background-color: var(--White);
+    border-radius: 1rem 1rem .5rem .5rem;
+    filter: drop-shadow(1px 1px 3px var(--LightGrayishBlue));
+    margin: auto;
+    max-width: 378px;
+}
+
+/* estilo el footer */
+
+.footer{
+    background-color: var(--DarkBlue);
+    text-align: center;
+    height: 100%;
+}
+
+.footer__content{
+    padding: 2rem 0;
+    max-width: 1600px;
+}
+.footer__redes{
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.footer__redes img:hover{
+    cursor: pointer;
+    background-color: var(--LimeGreen);
+    border-radius: 50%;
+    transition: .50s ease-in;
+}
+.footer__nav{
+    padding: 1rem 0;
+}
+
+.footer__list{
+    list-style: none;
+    padding: 0;
+    line-height: 2;
+    margin: 0;
+}
+
+.footer__link:hover{
+    color: var(--LimeGreen);
+    transition: .50s ease-in;
+
+}
+
+.footer__link{
+    color: var(--LightGrayishBlue);
+    text-decoration: none;
+}
+
+.footer__copy p{
+    color: var(--GrayishBlue);
+    padding-top: 1rem;
+}
+
+.btn:hover{
+    animation: btnsColors 2s ease-in infinite;
+    animation-fill-mode: forwards;
+}
+
+
+/* Agrego keyframe de opacidad para animacion */
+
+@keyframes opacity{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        transition: .50s ease-in;
+        opacity: 1;
+    }
+}
+
+/* Agrego keyframe de colores para btns */
+
+
+@keyframes btnsColors {
+    0% {
+      background: linear-gradient(to right, var(--BrightCyan, #00FFFF), var(--LimeGreen, #00FF00));
+    }
+    50% {
+      background: linear-gradient(to right, var(--LimeGreen, #00FF00), var(--BrightCyan, #00FFFF));
+    }
+    100% {
+      background: linear-gradient(to right, var(--BrightCyan, #00FFFF), var(--LimeGreen, #00FF00));
+    }
+  }
+
+
+/* Agrego keyframe de escala para botones e imagenes */
+
+@keyframes escala{
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+
+/* Agrego media para desktop */
+
+@media (min-width: 48rem){
+
+    /* estilo el header y sus elementos hijos  */
+
+    .header{
+        padding: 1em 0;
+    }
+
+    .nav__list{
+        position: static;
+        flex-direction: row;
+        height: 100%;
+        height: auto;
+        clip-path: none;
+        gap: 1rem;
+        margin-right: 1.5rem;
+        text-align: center;
+        background-color: transparent;
+        filter: none;
+
+    }
+
+    .box-model{
+        display: none;
+    }
+
+    .request{
+        display: block;
+        background: linear-gradient(45deg, var(--LimeGreen), var(--BrightCyan));
+        padding: .4rem 1rem;
+        border-radius: 2.4rem;
+        width: 120px;
+        text-align: center;
+        color: var(--VeryLightGray);
+        font-size: var(--size-md);
+        font-weight: 700;
+    }
+
+    .nav__link{
+        font-size: var(--size-md);
+    }
+
+    /* Estilo el main para desktop */
+
+    .welcome__img{
+        flex: 1;
+
+    }
+
+    .welcome__section{
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        max-width: 1600px;
+        margin: auto;
+        overflow: hidden;
+
+
+    }
+
+    .welcome__info{
+        flex: 1;
+        margin-top: 3rem;
+        padding: 2.5rem;
+        z-index: 2;
+        background-color: white;
+
+    }
+
+    .welcome__title{
+        text-align: left;
+        max-width: 350px;
+        padding-left: 1rem;
+    }
+
+    .welcome__description{
+        text-align: left;
+        max-width: 390px;
+
+    }
+
+    .welcome__link{
+        float: left;
+        margin: 1rem;
+    }
+
+    .welcome__fondo{
+        background-image: url(../images/bg-intro-desktop.svg);
+        background-position: left;
+    }
+
+    .welcome__celulares{
+        top: 10px;
+        height: 600px;
+        left: 20px;
+        z-index: 1;
+    }
+
+    /* Estilo la seccion bank para desktop */
+    
+    .bank{
+        text-align: left;
+    }
+
+    .bank__title{
+        padding: .5rem 0;
+    }
+
+    .bank__description{
+        border: 1 px solid black;
+        max-width: 600px;
+    }
+
+    .articles__bank{
+        padding: 3rem 0;
+        grid-template-columns: repeat(auto-fit, minmax(calc(50% - 1rem), 1fr));
+    }
+
+    .article__bank{
+        height: 100%;
+    }
+
+    
+    .bank__text{
+        padding: 0;
+        max-width: 275px;
+        font-size: .99em;
+
+    }
+
+    /* Estilo la seccion articulos */
+    .articles__grid{
+        grid-template-columns: repeat(auto-fit, minmax(calc(50% - 1rem), 1fr));
+
+    }
+
+    /* estilo la seccion del footer */
+    .footer__content{
+        justify-content: space-between;
+        display: flex;
+        width: 90%;
+        margin: auto;
+
+    }    
+
+    .footer__nav{
+        display: flex;
+        justify-content: space-between;
+        flex: 1;
+    }
+
+    .footer__list{
+        flex: 1;
+    }
+
+    .footer__nav{
+        padding: 0;
+    }
+
+    .welcome__link.link__foot{
+        
+        float: right;
+    }
+
+    
+}
+
+
+@media (min-width: 64rem){
+    .welcome__celulares{
+        top: 10px;
+        left: 80px;
+    }
+    .articles__bank{
+        padding: 3rem 0;
+        grid-template-columns: repeat(auto-fit, minmax(calc(25% - 2rem), 1fr));
+    }
+
+    .articles__grid{
+        grid-template-columns: repeat(auto-fit, minmax(calc(24% - 1rem), 1fr));
+    }
+}
+@media (min-width: 90rem){
+    .welcome__celulares{
+        top: 10px;
+        left: 200px;
+        z-index: 4;
+    }
+    .articles__description{
+        padding: 1rem 2.4rem;
+        max-width: 225px;
+
+    }
+}
